@@ -65,18 +65,27 @@ Motivation for this approach comes from the observation that data points have te
 
 ## Experiments
 
+Experimental results are presented on five datasets, four of which were used by Elkan et. al.[2] to demonstrate the effectiveness of K-Means with Triangle Inequality and one is a synthetically generated dataset by us. These datasets vary in dimensionality from 2 to 784, indicating applicability of our heuristic for low as well as high dimensional data.
+
+### Notations
+
+Let algorithm `V` be a variant of k-means and algorithm `V'` be the same variant augmented with our heuristic. Let `T` be the time required for `V` to converge to MSE value of `E`. Similarly, `T'` is the time required for `V'` to converge to MSE value of `E'`.
+Our evaluation metrics are the following: 
+* **Speedup :** Calulated as `(T/T')`. 
+* **Percentage increase in MSE (PIM) :** Calculated as `(100 * (E' -E))/E`. 
+
 ### Comparing with K-means with Triangle Inequality [2]
 |           |                     | **k' = 20** | **k' = 30** | **k' = 40** | **k' = 50** | **k' = 60** |
 |-----------|---------------------|:-------:|:-------:|:-------:|:-------:|:-------:|
-| **Birch**     | % Difference in MSE |  -0.11  |   0.04  |    0    |    0    |    0    |
+| **Birch**     | PIM % |  -0.11  |   0.04  |    0    |    0    |    0    |
 |           | Speedup             |   3.05  |   2.48  |   2.01  |   1.68  |   1.41  |
-| **Covtype**   | % Difference in MSE |   0.21  |   0.02  |    0    |    0    |    0    |
+| **Covtype**   | PIM % |   0.21  |   0.02  |    0    |    0    |    0    |
 |           | Speedup             |   2.32  |   1.81  |   1.61  |   1.55  |   1.42  |
-| **Mnist**     | % Difference in MSE |   1.30  |   0.72  |   0.51  |   0.43  |   0.37  |
+| **Mnist**     | PIM % |   1.30  |   0.72  |   0.51  |   0.43  |   0.37  |
 |           | Speedup             |   1.90  |   1.68  |   1.59  |   1.48  |   1.47  |
-| **KDDCup**    | % Difference in MSE |   0.81  |   0.11  |   0.08  |  -0.18  |    0    |
+| **KDDCup**    | PIM % |   0.81  |   0.11  |   0.08  |  -0.18  |    0    |
 |           | Speedup             |   1.44  |   1.33  |   1.42  |   0.88  |   1.18  |
-| **Synthetic** | % Difference in MSE |   0.19  |   0.11  |   0.06  |   0.03  |   0.01  |
+| **Synthetic** | PIM % |   0.19  |   0.11  |   0.06  |   0.03  |   0.01  |
 |           | Speedup             |   2.90  |   2.28  |   1.87  |   1.51  |   1.36  |
 
 ### Comparing with K-means++ [3] 
@@ -85,15 +94,15 @@ Note that as K-means++ is just a seeding technique, K-means with Triangle Inequa
 
 |           |                     | **k' = 20** | **k' = 30** | **k' = 40** | **k' = 50** | **k' = 60** |
 |-----------|---------------------|:-------:|:-------:|:-------:|:-------:|---------|
-| **Birch**     | % Difference in MSE |    0    |    0    |    0    |    0    |    0    |
+| **Birch**     | PIM % |    0    |    0    |    0    |    0    |    0    |
 |           | Speedup             |   3.14  |   2.26  |   1.93  |   1.67  |   1.31  |
-| **Covtype**   | % Difference in MSE |   0.03  |    0    |    0    |    0    |    0    |
+| **Covtype**   | PIM % |   0.03  |    0    |    0    |    0    |    0    |
 |           | Speedup             |   2.02  |   1.82  |   1.63  |   1.38  |   1.20  |
-| **Mnist**     | % Difference in MSE |   1.36  |   0.71  |   0.36  |   0.18  |   0.09  |
+| **Mnist**     | PIM % |   1.36  |   0.71  |   0.36  |   0.18  |   0.09  |
 |           | Speedup             |   1.47  |   1.44  |   1.26  |   1.19  |   1.15  |
-| **KDDCup**    | % Difference in MSE |   0.70  |   0.15  |   0.02  |  -0.01  |    0    |
+| **KDDCup**    | PIM % |   0.70  |   0.15  |   0.02  |  -0.01  |    0    |
 |           | Speedup             |   1.60  |   1.15  |   1.02  |   0.99  |   1.02  |
-| **Synthetic** | % Difference in MSE |   0.15  |   0.08  |   0.04  |   0.01  |   0.01  |
+| **Synthetic** | PIM % |   0.15  |   0.08  |   0.04  |   0.01  |   0.01  |
 |           | Speedup             |   2.45  |   1.97  |   1.71  |   1.35  |   1.17  |
 
 
