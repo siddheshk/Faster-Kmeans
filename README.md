@@ -72,7 +72,7 @@ Experimental results are presented on five datasets, four of which were used by 
 Let algorithm `V` be a variant of k-means and algorithm `V'` be the same variant augmented with our heuristic. Let `T` be the time required for `V` to converge to MSE value of `E`. Similarly, `T'` is the time required for `V'` to converge to MSE value of `E'`.
 Our evaluation metrics are the following: 
 * **Speedup :** Calulated as `(T/T')`. 
-* **Percentage increase in MSE (PIM) :** Calculated as `(100 * (E' -E))/E`. 
+* **Percentage increase in MSE (PIM) :** Calculated as `100 * (E' - E)/E`. 
 
 ### Comparing with K-means with Triangle Inequality [2]
 |           |                     | **k' = 20** | **k' = 30** | **k' = 40** | **k' = 50** | **k' = 60** |
