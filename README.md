@@ -48,7 +48,8 @@ Major bottleneck of K-means clustering is the computation of data point to clust
 
 Motivation for this approach comes from the observation that data points have tendency to go to clusters that were closer in the previous iteration. In k-means, we compute distance of a data point to every cluster even though the point has extremely little chance of being assigned to it. The figure below shows an example execution of k-means for a synthetic dataset of 100,000 points in 10 dimensions which needs to be partitioned into 100 clusters. X axis represents iteration of the algorithm and Y axis represents percentage of points that get assigned to a particular cluster. For example, in iteration 2, about 75 percent points got reassigned to same cluster as in iteration 1 and about 10 percent points got assigned to a cluster that was second closest cluster in previous iteration. As we progress through the algorithm, more points get assigned to same cluster or clusters that were close in previous iteration. 
 
-![alt text](Images/table.png "Point Distribution per Iteration")
+<img src="Images/table.png" alt="Point Distribution per Iteration" style="width: 10px;"/>
+
 
 ## References
 [1] S. P. Lloyd. *Least squares quantization in pcm*. Information Theory, IEEE Trans. on, 28(2):129–137, 1982.
