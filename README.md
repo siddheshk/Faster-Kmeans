@@ -13,9 +13,34 @@ The code is present in the **Code** folder.
 * **triangleInequality.py** : Python implementation of the K-means with Triangle Inequality Algorithm [2]
 * **heuristic_triangleinequality.py** : Python implementation of the K-means with Triangle Inequality Algorithm [2] augmented with our heuristic
 
+## Datasets
+
+The datasets used in our paper are present in the **Datasets** folder.
+
 ## Running the Code
 
+There are two types of files:
+* Algorithms not augmented with our heuristic.
+* Algorithms augmented with our heuristic
 
+If the code if of the first type, it can be run by calling the following function
+```python
+Kmeans(k, pointList, kmeansThreshold, initialCentroids=None)
+# k = Number of Clusters
+# pointList = List of n-dimensional points (Every point should be a list)
+# kmeansThreshold = Percentage Change in Mean Squared Error (MSE) below which the algorithm should stop. Used as a stopping criteria
+# initialCentroids (optional) = Provide initial seeds for centroids (List of points)
+```
+
+If the code if of the second type, it can be run by calling the following function
+```python
+Kmeans(k, pointList, kmeansThreshold, centroidsToRemember, initialCentroids=None)
+# k = Number of Clusters
+# pointList = List of n-dimensional points (Every point should be a list)
+# kmeansThreshold = Percentage Change in Mean Squared Error (MSE) below which the algorithm should stop. Used as a stopping criteria
+# centroidsToRemember = The value of k'. This value is the percentage of k to be used as the Candidate Cluster List (CCL)
+# initialCentroids (optional) = Provide initial seeds for centroids (List of points)
+```
 
 ## References
 [1] S. P. Lloyd. *Least squares quantization in pcm*. Information Theory, IEEE Trans. on, 28(2):129–137, 1982.
