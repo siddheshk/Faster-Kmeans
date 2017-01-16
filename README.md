@@ -44,12 +44,16 @@ Kmeans(k, pointList, kmeansThreshold, centroidsToRemember, initialCentroids=None
 
 ## Approach
 
-Major bottleneck of K-means clustering is the computation of data point to cluster centroid distance. For a dataset with *n* data points and *k* clusters, each iteration of K-means performs *n x k* such distance computations. To overcome this bottleneck, we maintain a list of candidate clusters for each data point. Let size of this list be *k'*. We assume that *k'* is significantly smaller than *k*. We build this candidate cluster list based on top *k'* nearest clusters to the data point after first iteration of K-means. Now each iteration of K-means will perform only *n x k'* distance computations.
+Major bottleneck of K-means clustering is the computation of data point to cluster centroid distance. For a dataset with `*n*` data points and `*k*` clusters, each iteration of K-means performs `*n x k*` such distance computations. To overcome this bottleneck, we maintain a list of candidate clusters for each data point. Let size of this list be `*k'*`. We assume that `*k'*` is significantly smaller than `*k*`. We build this candidate cluster list based on top `*k'*` nearest clusters to the data point after first iteration of K-means. Now each iteration of K-means will perform only `*n x k'*` distance computations.
 
 Motivation for this approach comes from the observation that data points have tendency to go to clusters that were closer in the previous iteration. In k-means, we compute distance of a data point to every cluster even though the point has extremely little chance of being assigned to it. The figure below shows an example execution of k-means for a synthetic dataset of 100,000 points in 10 dimensions which needs to be partitioned into 100 clusters. X axis represents iteration of the algorithm and Y axis represents percentage of points that get assigned to a particular cluster. For example, in iteration 2, about 75 percent points got reassigned to same cluster as in iteration 1 and about 10 percent points got assigned to a cluster that was second closest cluster in previous iteration. As we progress through the algorithm, more points get assigned to same cluster or clusters that were close in previous iteration. 
 <p align="center">
   <img src="Images/table.png" alt="Point Distribution per Iteration" width="500" align="middle"/>
 </p>
+
+## Experiments
+
+
 
 ## References
 [1] S. P. Lloyd. *Least squares quantization in pcm*. Information Theory, IEEE Trans. on, 28(2):129–137, 1982.
