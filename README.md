@@ -53,7 +53,21 @@ Motivation for this approach comes from the observation that data points have te
 
 ## Experiments
 
+### Comparing with K-means with Triangle Inequality [2]
 
+|            |                     | **k'=20** |      | **k'=30** |      | **k'=40** |      | **k'=50** |       | **k'=60** |      |
+|------------|---------------------|:---------:|:----:|:---------:|:----:|:---------:|:----:|:---------:|:-----:|:---------:|------|
+|            |                     |    RND    |  KPP |    RND    |  KPP |    RND    |  KPP |    RND    |  KPP  |    RND    |  KPP |
+| **Birch**     | % Difference in MSE |   -0.11   |   0  |    0.04   |   0  |     0     |   0  |     0     |   0   |     0     |   0  |
+|  | Speedup             |    3.05   | 3.14 |    2.48   | 2.26 |    2.01   | 1.93 |    1.68   |  1.67 |    1.41   | 1.31 |
+| **Covtype**    | % Difference in MSE |    0.21   | 0.03 |    0.02   |   0  |     0     |   0  |     0     |   0   |     0     |   0  |
+|  | Speedup             |    2.32   | 2.02 |    1.81   | 1.82 |    1.61   | 1.63 |    1.55   |  1.38 |    1.42   | 1.20 |
+| **Mnist**      | % Difference in MSE |    1.30   | 1.36 |    0.72   | 0.71 |    0.51   | 0.36 |    0.43   |  0.18 |    0.37   | 0.09 |
+|  | Speedup             |    1.90   | 1.47 |    1.68   | 1.44 |    1.59   | 1.26 |    1.48   |  1.19 |    1.47   | 1.15 |
+| **KDDCup**     | % Difference in MSE |    0.81   | 0.70 |    0.11   | 0.15 |    0.08   | 0.02 |   -0.18   | -0.01 |     0     |   0  |
+|  | Speedup             |    1.44   | 1.60 |    1.33   | 1.15 |    1.42   | 1.02 |    0.88   |  0.99 |    1.18   | 1.02 |
+| **Synthetic**  | % Difference in MSE |    0.19   | 0.15 |    0.11   | 0.08 |    0.06   | 0.04 |    0.03   |  0.01 |    0.01   | 0.01 |
+|  | Speedup             |    2.90   | 2.45 |    2.28   | 1.97 |    1.87   | 1.71 |    1.51   |  1.35 |    1.36   | 1.17 |
 
 ## References
 [1] S. P. Lloyd. *Least squares quantization in pcm*. Information Theory, IEEE Trans. on, 28(2):129–137, 1982.
