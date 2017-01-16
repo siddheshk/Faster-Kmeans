@@ -32,7 +32,7 @@ kplus.init_centers()
 cList = [Point(x,len(x)) for x in kplus.mu]
 ```
 
-If the code if of the first type, it can be run by calling the following function
+If the code for an algorithm not augmented with our heuristic, it can be run by calling the following function
 ```python
 Kmeans(k, pointList, kmeansThreshold, initialCentroids=None)
 # k = Number of Clusters
@@ -42,7 +42,7 @@ Kmeans(k, pointList, kmeansThreshold, initialCentroids=None)
 # initialCentroids = [Point(x,len(x)) for x in pointList]
 ```
 
-If the code if of the second type, it can be run by calling the following function
+If the code for an algorithm augmented with our heuristic, it can be run by calling the following function
 ```python
 Kmeans(k, pointList, kmeansThreshold, centroidsToRemember, initialCentroids=None)
 # k = Number of Clusters
