@@ -39,7 +39,7 @@ Kmeans(k, pointList, kmeansThreshold, initialCentroids=None)
 # pointList = List of n-dimensional points (Every point should be a list)
 # kmeansThreshold = Percentage Change in Mean Squared Error (MSE) below which the algorithm should stop. Used as a stopping criteria
 # initialCentroids (optional) = Provide initial seeds for centroids (List of Point() class objects). It can be generated from a list of n-dimensional points as follows:
-# cList = [Point(x,len(x)) for x in pointList]
+# initialCentroids = [Point(x,len(x)) for x in pointList]
 ```
 
 If the code if of the second type, it can be run by calling the following function
@@ -50,7 +50,7 @@ Kmeans(k, pointList, kmeansThreshold, centroidsToRemember, initialCentroids=None
 # kmeansThreshold = Percentage Change in Mean Squared Error (MSE) below which the algorithm should stop. Used as a stopping criteria
 # centroidsToRemember = The value of k'. This value is the percentage of k to be used as the Candidate Cluster List (CCL)
 # initialCentroids (optional) = Provide initial seeds for centroids (List of Point() class objects). It can be generated from a list of n-dimensional points as follows:
-# cList = [Point(x,len(x)) for x in pointList]
+# initialCentroids = [Point(x,len(x)) for x in pointList]
 ```
 
 
