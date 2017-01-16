@@ -12,6 +12,7 @@ The code is present in the **Code** folder.
 * **heuristic_kmeans.py** : Python implementation of Lloyd's Algorithm [1] augmented with our heuristic
 * **triangleInequality.py** : Python implementation of the K-means with Triangle Inequality Algorithm [2]
 * **heuristic_triangleinequality.py** : Python implementation of the K-means with Triangle Inequality Algorithm [2] augmented with our heuristic
+* **kpp.py** : Python implementation of K-means++ [3] algorithm. As this is only a seeding technique, it can be used with any other K-means algorithm (including the ones mentioned above). Therefore, a separate augmentation with our heuristic is not provided.
 
 ## Datasets
 
@@ -19,9 +20,17 @@ The datasets used in our paper are present in the **Datasets** folder.
 
 ## Running the Code
 
-There are two types of files:
+There are three types of files:
+* Seeding Algorithms (kpp.py)
 * Algorithms not augmented with our heuristic.
 * Algorithms augmented with our heuristic
+
+A sample code for running **kpp.py** is given below
+```python
+kplus = KPP(numClusters,X=np.array(pointList))
+kplus.init_centers()
+cList = [Point(x,len(x)) for x in kplus.mu]
+```
 
 If the code if of the first type, it can be run by calling the following function
 ```python
@@ -29,7 +38,9 @@ Kmeans(k, pointList, kmeansThreshold, initialCentroids=None)
 # k = Number of Clusters
 # pointList = List of n-dimensional points (Every point should be a list)
 # kmeansThreshold = Percentage Change in Mean Squared Error (MSE) below which the algorithm should stop. Used as a stopping criteria
-# initialCentroids (optional) = Provide initial seeds for centroids (List of points)
+# initialCentroids (optional) = Provide initial seeds for centroids (List of Point() class objects). 
+It can be generated from a list of n-dimensional points as follows 
+cList = [Point(x,len(x)) for x in pointList]
 ```
 
 If the code if of the second type, it can be run by calling the following function
@@ -39,8 +50,11 @@ Kmeans(k, pointList, kmeansThreshold, centroidsToRemember, initialCentroids=None
 # pointList = List of n-dimensional points (Every point should be a list)
 # kmeansThreshold = Percentage Change in Mean Squared Error (MSE) below which the algorithm should stop. Used as a stopping criteria
 # centroidsToRemember = The value of k'. This value is the percentage of k to be used as the Candidate Cluster List (CCL)
-# initialCentroids (optional) = Provide initial seeds for centroids (List of points)
+# initialCentroids (optional) = Provide initial seeds for centroids (List of Point() class objects). 
+It can be generated from a list of n-dimensional points as follows 
+cList = [Point(x,len(x)) for x in pointList]
 ```
+
 
 ## Approach
 
