@@ -67,7 +67,7 @@ Motivation for this approach comes from the observation that data points have te
 | **Synthetic** | % Difference in MSE |   0.19  |   0.11  |   0.06  |   0.03  |   0.01  |
 |           | Speedup             |   2.90  |   2.28  |   1.87  |   1.51  |   1.36  |
 
-### Comparing with K-means++ [2] 
+### Comparing with K-means++ [3] 
 
 Note that as K-means++ is just a seeding technique, K-means with Triangle Inequality is used as the algorithm after seeding
 
@@ -89,3 +89,5 @@ Note that as K-means++ is just a seeding technique, K-means with Triangle Inequa
 [1] S. P. Lloyd. *Least squares quantization in pcm*. Information Theory, IEEE Trans. on, 28(2):129–137, 1982.
 
 [2] C. Elkan. *Using the triangle inequality to accelerate k-means*. In International Conference om Machine Learning, pages 147–153, 2003.
+
+[3] D. Arthur and S. Vassilvitskii. *k-means++: The advantages of careful seeding*. InACM-SIAM symposium on Discrete algorithms, pages 1027–1035, 2007.
