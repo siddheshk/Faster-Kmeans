@@ -19,4 +19,5 @@ The code is present in the **Code** folder.
 
 ## References
 [1] S. P. Lloyd. *Least squares quantization in pcm*. Information Theory, IEEE Trans. on, 28(2):129–137, 1982.
+
 [2] C. Elkan. *Using the triangle inequality to accelerate k-means*. In International Conference om Machine Learning, pages 147–153, 2003.
