@@ -112,13 +112,13 @@ Note that as K-means++ is just a seeding technique, K-means with Triangle Inequa
 
 |         |                     | k' = 20 | k' = 30 | k' = 40 | k' = 50 | k' = 60 |
 |---------|---------------------|:-------:|:-------:|:-------:|:-------:|---------|
-| Birch   | % Difference in MSE |  0.002  |    0    |    0    |    0    |    0    |
+| Birch   | PIM % |  0.002  |    0    |    0    |    0    |    0    |
 |         | Speedup             |   2.04  |   1.87  |   1.57  |   1.39  |   1.26  |
-| Covtype | % Difference in MSE |  -0.01  |    0    |    0    |    0    |    0    |
+| Covtype | PIM % |  -0.01  |    0    |    0    |    0    |    0    |
 |         | Speedup             |   2.86  |   2.28  |   1.88  |   1.59  |   1.38  |
-| Mnist   | % Difference in MSE |   0.83  |   0.40  |   0.22  |   0.12  |   0.05  |
+| Mnist   | PIM % |   0.83  |   0.40  |   0.22  |   0.12  |   0.05  |
 |         | Speedup             |   4.76  |   3.32  |   2.25  |   1.63  |   1.40  |
-| KDDCup  | % Difference in MSE |  0.006  |  0.004  |    0    |    0    |    0    |
+| KDDCup  | PIM % |  0.006  |  0.004  |    0    |    0    |    0    |
 |         | Speedup             |   3.37  |   3.04  |   2.27  |   1.80  |   1.57  |
 
 ## References
