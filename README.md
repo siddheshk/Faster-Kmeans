@@ -110,15 +110,15 @@ Note that as K-means++ is just a seeding technique, K-means with Triangle Inequa
 
 ### Comparing with Enhanced K-means Clustering Algorithm [4]
 
-|         |                     | k' = 20 | k' = 30 | k' = 40 | k' = 50 | k' = 60 |
+|         |                     | **k' = 20** | **k' = 30** | **k' = 40** | **k' = 50** | **k' = 60** |
 |---------|---------------------|:-------:|:-------:|:-------:|:-------:|---------|
-| Birch   | PIM % |  0.002  |    0    |    0    |    0    |    0    |
+| **Birch**   | PIM % |  0.002  |    0    |    0    |    0    |    0    |
 |         | Speedup             |   2.04  |   1.87  |   1.57  |   1.39  |   1.26  |
-| Covtype | PIM % |  -0.01  |    0    |    0    |    0    |    0    |
+| **Covtype** | PIM % |  -0.01  |    0    |    0    |    0    |    0    |
 |         | Speedup             |   2.86  |   2.28  |   1.88  |   1.59  |   1.38  |
-| Mnist   | PIM % |   0.83  |   0.40  |   0.22  |   0.12  |   0.05  |
+| **Mnist**   | PIM % |   0.83  |   0.40  |   0.22  |   0.12  |   0.05  |
 |         | Speedup             |   4.76  |   3.32  |   2.25  |   1.63  |   1.40  |
-| KDDCup  | PIM % |  0.006  |  0.004  |    0    |    0    |    0    |
+| **KDDCup**  | PIM % |  0.006  |  0.004  |    0    |    0    |    0    |
 |         | Speedup             |   3.37  |   3.04  |   2.27  |   1.80  |   1.57  |
 
 ## References
