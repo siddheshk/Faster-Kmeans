@@ -137,7 +137,7 @@ Note that as K-means++ is just a seeding technique, K-means with Triangle Inequa
 ## References
 [1] S. P. Lloyd. *Least squares quantization in pcm*. Information Theory, IEEE Trans. on, 28(2):129–137, 1982.
 
-[2] C. Elkan. *Using the triangle inequality to accelerate k-means*. In International Conference om Machine Learning, pages 147–153, 2003.
+[2] C. Elkan. *Using the triangle inequality to accelerate k-means*. In International Conference on Machine Learning, pages 147–153, 2003.
 
 [3] D. Arthur and S. Vassilvitskii. *k-means++: The advantages of careful seeding*. InACM-SIAM symposium on Discrete algorithms, pages 1027–1035, 2007.
 
